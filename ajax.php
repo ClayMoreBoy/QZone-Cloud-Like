@@ -11,19 +11,15 @@ if($_SESSION['uid']){
 		
 			if(strlen($_GET['q']) < 5){	rtnmsg(3,"QQ号太短"); }
 
-			$re = "/sid=(.*)/"; 
-			
-			preg_match($re, $_GET['u'], $matches);
-			
-			if(empty($matches[1])){
+			if(empty($_GET['sid'])){
 				rtnmsg(7,"您的URL中没有SID，请检查后重试。");
 			}
 			
-			if(testsid($_GET['q'],$matches[1])==false){
+			if(testsid($_GET['q'],$_GET['sid'])==false){
 				rtnmsg(7,"您的SID或QQ号错误。");
 			}
 
-			$DB->Savesid($_SESSION['uid'],$_GET['q'],$matches[1]);
+			$DB->Savesid($_SESSION['uid'],$_GET['q'],$_GET['sid']);
 			rtnmsg(0,"保存成功");
 		}else{
 			rtnmsg(1,"信息不完整");
