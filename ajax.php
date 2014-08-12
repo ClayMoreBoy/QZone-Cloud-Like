@@ -11,7 +11,7 @@ if($_SESSION['uid']){
 		
 			if(strlen($_GET['q']) < 5){	rtnmsg(3,"QQ号太短"); }
 
-			$re = "/sid=(.*)&aid/"; 
+			$re = "/sid=(.*)/"; 
 			
 			preg_match($re, $_GET['u'], $matches);
 			
