@@ -31,7 +31,7 @@
             </div>
           </div>
           <div class="row">
-            <div class="12u"> <img id="vcode" alt="点击刷新验证码" onclick="$('#vcode').attr('src','http://qzlike.ty/getvcode.php?cache=' + Math.random());" src="http://qzlike.ty/getvcode.php?cache=<?php echo rand(1,99999);?>" style="float:right;width:130px;height:50px;display:inline">
+            <div class="12u"> <img id="vcode" alt="点击刷新验证码" onclick="$('#vcode').attr('src','/getvcode.php?cache=' + Math.random());" src="/getvcode.php?cache=<?php echo rand(1,99999);?>" style="float:right;width:130px;height:50px;display:inline">
               <input id="vc" type="text" placeholder="验证码" style="width:60%;display:inline;float:left;">
             </div>
           </div>
