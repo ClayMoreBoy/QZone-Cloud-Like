@@ -16,7 +16,7 @@ if($_SESSION['uid']){
 			}
 			
 			if(testsid($_GET['q'],$_GET['sid'])==false){
-				rtnmsg(7,"您的SID或QQ号错误。");
+				rtnmsg(7,"您的SID或QQ号错误。多点几次保存试试！");
 			}
 
 			$DB->Savesid($_SESSION['uid'],$_GET['q'],$_GET['sid']);
