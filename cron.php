@@ -76,7 +76,6 @@ function like_click($url,$referer=NULL,$cookie){
 		curl_close($ch);
 		$re = "/Set-Cookie: (.*?);/"; 
 		preg_match($re, $page, $matches);
-		echo $page;
 		return $matches[1];
 }
 ?>
